@@ -1,0 +1,21 @@
+header .nav-left h1 a{
+    color:firebrick;
+    text-decoration: none;
+    margin: 12px;
+}
+
+header .nav-right a{
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+    font-weight: bold;
+}
+
+.test{
+    padding: 36px;
+}
+
+.post-entry h3 a{
+    text-decoration: none;
+    color: rgb(243, 166, 104);
+}

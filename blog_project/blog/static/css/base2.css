@@ -1,0 +1,16 @@
+body{
+    font-family: 'Encode Sans SC', sans-serif;
+}
+
+header h1 a{
+    color:firebrick;
+    text-decoration: none;
+}
+
+h3{
+    color: aqua;
+}
+
+.post-entry h3 a{
+    text-decoration: none;
+}

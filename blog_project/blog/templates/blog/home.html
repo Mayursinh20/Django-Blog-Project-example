@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Django Blog {% endblock title %}
+
+{% block body %}
+{% if user.is_authenticated %}
+    <p>hii {{user.username}}!</p>
+    <p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+    <p>You Are Not Logged in</p>
+    <a href="{% url 'login' %}">Login</a>
+{% endif %}
+
+    {% for i in mytext %}
+        <div class="post-entry">
+            <h3><a href="{{i.get_absolute_url}}">{{i.title}}</a></h3>
+            <p>{{i.describe}}</p>
+        </div>
+    {% endfor %}
+{% endblock body %}

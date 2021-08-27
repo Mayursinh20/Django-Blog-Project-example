@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}page {% endblock title %}
+
+{% block body %}
+<div class="post-entry">
+    <h3><a href="">{{post.title}}</a></h3>
+    <p>{{post.describe}}</p>
+</div>
+<div class="nav-right">
+    {% if user.is_authenticated %}
+        <p><a href="{% url 'post_update' pk=post.pk %}">Update Post</a></p>
+        <p><a href="{% url 'post_delete' pk=post.pk %}">Delete Post</a></p>
+    {% else %}
+        <p>Sorry! You are logged in</p>
+    {% endif %}
+</div>
+  {% endblock body %} 

@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} New post {% endblock title %}
+
+{% block body %}
+    <h1>New Post</h1>
+    {% if user.is_authenticated %}
+         <form action="" method="POST">{% csrf_token %}
+                {{ form.as_p }}
+                 <input type="submit" value="Save"/>
+         </form>
+    {% else %}
+         <p>Please First Log In</p>
+
+    {% endif %}
+       
+{% endblock body %}
